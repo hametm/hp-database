@@ -1,5 +1,5 @@
 import './style.css';
-import { getRandomWow, getWowByMovie, getWowByYear, getWowByCharacter, getWowByNumber } from './getWows';
+import { getRandomWow, getWowByMovie, getWowByYear, getWowByDirector, getWowByOccurrence } from './getWows';
 
 const randomButton = document.getElementById("random-button");
 const searchButton = document.getElementById("search-button");
@@ -30,15 +30,15 @@ function displayWow(data) {
     const line = document.createElement("p");
     line.textContent = `"${data[0].full_line}"`;
 
-    const numberOfWows = document.createElement("p");
-    numberOfWows.textContent = `Total wows: ${data[0].total_wows_in_movie}`;
+    const occurrence = document.createElement("p");
+    occurrence.textContent = `Wow ${data[0].current_wow_in_movie} of ${data[0].total_wows_in_movie}`;
 
     const video = document.createElement("video");
     video.controls = "controls";
     const source = document.createElement("source");
     source.src = data[0].video["1080p"];
     video.appendChild(source);
-    container.append(movie, director, character, line, numberOfWows, video);
+    container.append(movie, director, character, line, occurrence, video);
     main.appendChild(container);
 }
 
@@ -57,12 +57,13 @@ searchButton.onclick = () => {
         case "year":
             getWow(getWowByYear, searchValue);
             break;
-        case "character":
-            getWow(getWowByCharacter, searchValue);
+        case "director":
+            getWow(getWowByDirector, searchValue);
             break;
-        case "number": 
-            getWow(getWowByNumber, searchValue);
+        case "occurrence": 
+            getWow(getWowByOccurrence, searchValue);
             break;
     }
 }
+
 
