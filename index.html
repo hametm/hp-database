@@ -9,22 +9,28 @@
 <body>
     <script src="bundle.js" defer></script>
     <header>
-        <h1>Owen Wilson Says Wow</h1>
+        <h1>Owen Wilson Says <span class="emphasis">Wow</span></h1>
     </header>
     <main>
-        <p>Search for a specific "wow," or get a random one.</p>
-        <label for="categories"></label>
-        <select name="categories" id="categories">
-            <option value="movie">Movie</option>
-            <option value="year">Year</option>
-            <option value="director">Director</option>
-            <option value="occurrence">Occurrence</option>
-        </select>
-        <label for="search"></label>
-        <input type="text" id="search">
-        <button id="search-button">Search</button>
-        <button id="random-button">Surprise me</button>
+        <div class="search-container">
+            <p>Search for a specific "wow," or get a random one.</p>
+            <div class="search">
+                <label for="categories"></label>
+                <select name="categories" id="categories">
+                    <option value="movie">Movie</option>
+                    <option value="year">Year</option>
+                    <option value="director">Director</option>
+                    <option value="occurrence">Occurrence</option>
+                </select>
+                <label for="search"></label>
+                <input type="text" id="search-bar">
+                <button id="search-button"></button>
+            </div>
+            <div class="button-container">
+                <button id="random-button">Surprise me</button>
+            </div>
+        </div>
+        <div id="wow-container"></div>
     </main>
-    <footer></footer>
 </body>
 </html>
