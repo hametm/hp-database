@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Roboto:ital,wght@0,400;0,700;1,400;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;    
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Ms Madi', cursive;
+    font-size: 7rem;
+    margin-bottom: 1rem;
+    color: rgb(82, 57, 4);
+}
+
+.emphasis {
+    color: hotpink;
+    text-shadow: -5px 5px 4px black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.search-container p {
+    margin: 0;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+#search-bar {
+    border-radius: 15px;
+    border: 1px solid rgb(214, 214, 214);
+    width: 300px;
+    height: 35px;
+    padding-left: .5rem;
+    padding-right: 45px;
+    font-size: 1rem;
+}
+
+#search-bar:focus, #categories:focus {
+    outline: 1px solid rgb(76, 151, 204);
+}
+
+#categories {
+    height: 35px;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .25rem;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+#search-button {
+    background-image: url(./images/search-icon.png);
+    background-size: 67%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    margin-left: -55px;
+}
+
+#seach-button:hover {
+    cursor: pointer;
+}
+
+#random-button {
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif; 
+    padding: 12px 16px;
+    border: none;
+    background-color: teal;  
+    color: white; 
+    font-size: 1rem;
+}
+
+.container {
+    margin-top: 2rem;
+}
+
+#wow-container {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+
+#owen-image {
+    width: 500px;
+}
+
