@@ -13,7 +13,7 @@
     </header>
     <main>
         <div class="search-container">
-            <p>Search for a specific "wow," or get a random one.</p>
+            <p>Turn up your volume and search for a "wow."</p>
             <div class="search">
                 <label for="categories"></label>
                 <select name="categories" id="categories">
@@ -23,8 +23,10 @@
                     <option value="occurrence">Occurrence</option>
                 </select>
                 <label for="search"></label>
-                <input type="text" id="search-bar">
-                <button id="search-button"></button>
+                <div class="bar-and-button">
+                    <input type="text" id="search-bar">
+                    <button id="search-button"></button>
+                </div>
             </div>
             <div class="button-container">
                 <button id="random-button">Surprise me</button>
@@ -32,5 +34,6 @@
         </div>
         <div id="wow-container"></div>
     </main>
+    <footer></footer>
 </body>
 </html>
