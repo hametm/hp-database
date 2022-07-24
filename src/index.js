@@ -27,12 +27,11 @@ function displayWow(data) {
     const bottomRow = document.createElement("p");
     bottomRow.classList.add("bottomRow");
 
-    topRow.textContent = `${data[0].movie} (${data[0].year}) |
-            Directed by ${data[0].director} |
-            Role: ${data[0].character}`;
+    topRow.textContent = `${data[0].movie} (${data[0].year}), 
+                            Directed by ${data[0].director}`;
 
     bottomRow.textContent = `Full quote (wow ${data[0].current_wow_in_movie} of ${data[0].total_wows_in_movie}):
-            "${data[0].full_line}"`;
+            "${data[0].full_line}" - ${data[0].character}`;
 
     const audio = document.createElement("audio");
     const source = document.createElement("source");
@@ -44,7 +43,11 @@ function displayWow(data) {
     container.append(topRow, bottomRow, audio);
 }
 
-randomButton.onclick = () => getWow(getRandomWow, "");
+randomButton.onclick = () => {
+    const input = document.getElementById("search-bar");
+    input.value = "";
+    getWow(getRandomWow, "");
+} 
 
 searchButton.onclick = () => {
     const categories = document.getElementById("categories");

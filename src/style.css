@@ -5,8 +5,19 @@ body {
     font-family: 'Roboto', sans-serif;    
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     background-color: #f9f9f9;
     min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-grow: 1;
+    padding: 0 1rem;
 }
 
 header {
@@ -17,22 +28,13 @@ header {
 header h1 {
     font-family: 'Ms Madi', cursive;
     font-size: 7rem;
-    margin-bottom: 1rem;
+    margin: 2rem auto 0 auto;
     color: rgb(82, 57, 4);
 }
 
 .emphasis {
     color: hotpink;
-    text-shadow: -5px 5px 4px black;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
-    flex-grow: 1;
+    text-shadow: -2px 2px 5px black;
 }
 
 .search-container {
@@ -40,7 +42,6 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-top: 2rem;
 }
 
 .search-container p {
@@ -120,17 +121,16 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .5rem;
-    margin-top: 1rem;
+    gap: 1rem;
 }
 
-.container h2, .contaienr p {
+.container h2, .container p {
     margin: 0;
 }
 
-.topRow {
+.topRow, .bottomRow {
     display: flex;
-
+    text-align: center;
 }
 
 .bottomRow {
@@ -150,6 +150,11 @@ footer {
         min-height: auto;
     }
 
+    main {
+        padding: 0;
+        gap: 0;
+    }
+
     header {
         justify-content: flex-start;
     }
@@ -161,8 +166,9 @@ footer {
         margin: 0;
     }
 
-    main {
-        gap: 0;
+    .emphasis {
+        color: hotpink;
+        text-shadow: -2px 2px 4px black;
     }
 
     .search-container {
@@ -186,7 +192,29 @@ footer {
         margin-top: 1.5rem;
     }
 
+    .topRow, .bottomRow {
+        text-align: left;
+    }
+
     footer {
         display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    header h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1180px) {
+    header h1 {
+        font-size: 5.5rem;
     }
 }
