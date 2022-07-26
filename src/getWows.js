@@ -16,7 +16,6 @@ async function getWowByYear(year) {
     return data;
 }
 
-// Doesn't work??
 async function getWowByDirector(director) {
     const response = await fetch(`https://owen-wilson-wow-api.herokuapp.com/wows/random?director=${director}`, {mode: "cors"});
     const data = await response.json();
